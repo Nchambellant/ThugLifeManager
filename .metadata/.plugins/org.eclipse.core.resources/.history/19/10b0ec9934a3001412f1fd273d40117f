@@ -1,0 +1,12 @@
+package managers;
+
+import entities.Task;
+import entities.TaskBoard;
+
+public class TaskManager {
+
+	public void AddTask(TaskBoard taskBoard, Task task) {
+		taskBoard.Tasks.add(task);
+	}
+
+}

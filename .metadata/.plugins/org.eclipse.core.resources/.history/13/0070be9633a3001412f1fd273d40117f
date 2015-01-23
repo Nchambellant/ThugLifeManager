@@ -1,0 +1,24 @@
+package tests;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class TaskCreation {
+
+	@Test
+	public void CreateTask() {
+		//Arrange 
+		Task task = new Task();
+		TaskBoard taskBoard = new TaskBoard();
+		TaskManager taskManager = new TaskManager();
+		
+		//Act
+		taskManager.AddTask(taskBoard, task);
+		
+		//Assert
+		assertTrue(taskBoard.Tasks.Contains(task));
+		}
+	}
+
+}
