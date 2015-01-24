@@ -1,0 +1,16 @@
+package viewModels;
+
+import models.*;
+
+public class MainFrameViewModel {
+
+	public MainFrameModel getModel() {
+		return model;
+	}
+
+	public void setModel(MainFrameModel model) {
+		this.model = model;
+	}
+	
+	private MainFrameModel model;
+}

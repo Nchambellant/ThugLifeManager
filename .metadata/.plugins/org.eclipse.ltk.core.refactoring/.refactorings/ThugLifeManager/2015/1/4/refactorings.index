@@ -1,0 +1,7 @@
+1422108141245	Delete element
+1422108160071	Delete element
+1422108202840	Rename package 'gui'
+1422108229378	Rename type 'MainFrame'
+1422108338249	Encapsulate field 'taskBoard'
+1422108939829	Rename package 'viewModel'
+1422108964264	Encapsulate field 'model'
