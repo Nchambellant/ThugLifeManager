@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;tests.TaskCreation.java&apos; to &apos;TaskManagerTest.java&apos;&#x0D;&#x0A;- Original project: &apos;UnitTests&apos;&#x0D;&#x0A;- Original element: &apos;tests.TaskCreation.java&apos;&#x0D;&#x0A;- Renamed element: &apos;tests.TaskManagerTest.java&apos;" description="Rename compilation unit &apos;TaskCreation.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;tests{TaskCreation.java" name="TaskManagerTest.java" references="false" stamp="1422101876001" version="1.0"/>
+</session>
