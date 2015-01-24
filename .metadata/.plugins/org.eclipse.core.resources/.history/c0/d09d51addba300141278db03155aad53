@@ -14,7 +14,7 @@ import entities.TaskBoard;
 public class TaskManagerTest {
 
 	@Test
-	public void addTask() {
+	public void addTaskToTaskBoard() {
 		//Arrange 
 		Task task = new Task();
 		TaskBoard taskBoard = new TaskBoard();
@@ -53,13 +53,11 @@ public class TaskManagerTest {
 	@Test
 	public void createTaskWithTitle(){
 		//Arrange
-		String taskTitle = "default task title";
 		Task task = new Task(){{
-			setTitle(taskTitle);
+			setTitle("default task title");
 		}};
 		
 		//Act
 		//Assert
-		assertTrue(task.getTitle() == taskTitle);
 	}
 	}

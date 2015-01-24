@@ -14,7 +14,7 @@ import entities.TaskBoard;
 public class TaskManagerTest {
 
 	@Test
-	public void addTask() {
+	public void createTask() {
 		//Arrange 
 		Task task = new Task();
 		TaskBoard taskBoard = new TaskBoard();
@@ -32,7 +32,7 @@ public class TaskManagerTest {
 	public void completeTask(){
 		//Arrange
 		Task task = new Task(){{
-			setIsCompleted(false);
+			setIsCompleted(true);
 		}};
 		TaskBoard taskBoard = new TaskBoard(){{
 			setTasks(
@@ -48,18 +48,5 @@ public class TaskManagerTest {
 		
 		//Assert
 		assertTrue(task.getIsCompleted());
-	}
-	
-	@Test
-	public void createTaskWithTitle(){
-		//Arrange
-		String taskTitle = "default task title";
-		Task task = new Task(){{
-			setTitle(taskTitle);
-		}};
-		
-		//Act
-		//Assert
-		assertTrue(task.getTitle() == taskTitle);
 	}
 	}
