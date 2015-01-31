@@ -62,26 +62,4 @@ public class TaskManagerTest {
 		//Assert
 		assertTrue(task.getTitle() == taskTitle);
 	}
-	
-	@Test
-	public void deleteTask(){
-		//Arrange
-		String taskTitle = "default task title";
-		Task task = new Task(){{
-			setTitle(taskTitle);
-		}};
-		TaskBoard taskBoard = new TaskBoard(){{
-			setTasks(
-					new ArrayList<Task>(){{
-						add(task);
-					}}
-					);
-		}};
-		TaskManager taskManager = new TaskManager();
-		//Act
-		taskManager.deleteTask(taskBoard, task);
-		
-		//Assert
-		assertTrue(!taskBoard.getTasks().contains(task));
-	}
 	}

@@ -1,7 +1,0 @@
-package viewModels;
-
-import models.*;
-
-public class MainFrameViewModel {
-	private MainFrameModel model;
-}

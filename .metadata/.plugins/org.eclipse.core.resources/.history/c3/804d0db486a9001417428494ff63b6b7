@@ -82,6 +82,7 @@ public class TaskManagerTest {
 		taskManager.deleteTask(taskBoard, task);
 		
 		//Assert
-		assertTrue(!taskBoard.getTasks().contains(task));
+		assertTrue(taskBoard.getTasks().contains(task));
+		
 	}
 	}
