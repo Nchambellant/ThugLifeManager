@@ -1,6 +1,6 @@
 package views;
 
-import viewModels.MainFrameViewModel;
+import viewModels.*;
 
 import java.awt.EventQueue;
 
@@ -75,6 +75,6 @@ public class MainFrameView {
 	private void refreshTaskList(){
 		taskList.removeAll();
 		
-		// toAdd: getting added tasks
+		
 	}
 }

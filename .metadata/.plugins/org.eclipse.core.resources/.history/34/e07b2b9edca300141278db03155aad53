@@ -1,6 +1,6 @@
 package views;
 
-import viewModels.MainFrameViewModel;
+import viewModels.*;
 
 import java.awt.EventQueue;
 
@@ -18,7 +18,7 @@ public class MainFrameView {
 	private JFrame frame;
 	private JTextField taskTitleTextField;
 	private JButton addTaskBtn;
-	private JList taskList;
+	private JList list;
 
 	/**
 	 * Launch the application.
@@ -61,20 +61,13 @@ public class MainFrameView {
 		addTaskBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				viewModel.addTask(taskTitleTextField.getText());
-				refreshTaskList();
 			}
 		});
 		addTaskBtn.setBounds(694, 11, 80, 20);
 		frame.getContentPane().add(addTaskBtn);
 		
-		taskList = new JList();
-		taskList.setBounds(663, 42, -639, 356);
-		frame.getContentPane().add(taskList);
-	}
-	
-	private void refreshTaskList(){
-		taskList.removeAll();
-		
-		// toAdd: getting added tasks
+		list = new JList();
+		list.setBounds(663, 42, -639, 356);
+		frame.getContentPane().add(list);
 	}
 }

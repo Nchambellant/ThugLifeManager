@@ -1,6 +1,6 @@
 package views;
 
-import viewModels.MainFrameViewModel;
+import viewModels.*;
 
 import java.awt.EventQueue;
 
@@ -61,7 +61,6 @@ public class MainFrameView {
 		addTaskBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				viewModel.addTask(taskTitleTextField.getText());
-				refreshTaskList();
 			}
 		});
 		addTaskBtn.setBounds(694, 11, 80, 20);
@@ -72,9 +71,5 @@ public class MainFrameView {
 		frame.getContentPane().add(taskList);
 	}
 	
-	private void refreshTaskList(){
-		taskList.removeAll();
-		
-		// toAdd: getting added tasks
-	}
+	private void refresh
 }

@@ -1,7 +1,7 @@
 package viewModels;
 
 import entities.*;
-import models.MainFrameModel;
+import models.*;
 
 public class MainFrameViewModel {
 	
@@ -9,7 +9,7 @@ public class MainFrameViewModel {
 	public void addTask(String newTaskTitle)
 	{
 		Task newTask = new Task(){{
-			setTitle(newTaskTitle);
+			
 		}};
 		model.getTaskBoard().getTasks().add(newTask);
 	}

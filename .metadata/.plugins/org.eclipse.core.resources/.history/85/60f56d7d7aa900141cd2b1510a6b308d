@@ -1,6 +1,6 @@
 package views;
 
-import viewModels.MainFrameViewModel;
+import viewModels.*;
 
 import java.awt.EventQueue;
 

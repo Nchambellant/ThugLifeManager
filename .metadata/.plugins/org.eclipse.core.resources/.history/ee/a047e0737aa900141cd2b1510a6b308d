@@ -1,7 +1,6 @@
 package viewModels;
 
-import entities.*;
-import models.MainFrameModel;
+import models.*;
 
 public class MainFrameViewModel {
 	
