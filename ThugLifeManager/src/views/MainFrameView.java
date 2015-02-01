@@ -1,10 +1,6 @@
 package views;
 
-import entities.*; // this line has to be deleted in the future!
-import models.MainFrameModel; // this line has to be deleted in the future!
 import viewModels.MainFrameViewModel;
-
-import java.awt.EventQueue;
 
 import javax.swing.DefaultListModel;
 import javax.swing.JFrame;
@@ -16,11 +12,10 @@ import java.awt.event.ActionEvent;
 
 import javax.swing.JList;
 
-public class MainFrameView {
+public class MainFrameView extends MainView {
 	
 	private static MainFrameViewModel viewModel;
 	
-	private JFrame frame;
 	private JTextField taskTitleTextField;
 	private JButton addTaskBtn;
 	private DefaultListModel<String> taskListModel;
@@ -29,26 +24,26 @@ public class MainFrameView {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	/* public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
 					MainFrameView window = new MainFrameView();
 					window.frame.setVisible(true);
-					
-					initializeFromNavigator(); // this line has to be deleted in the future!
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
 		});
 	}
+	*/
 
 	/**
 	 * Create the application.
 	 */
-	public MainFrameView() {
+	public MainFrameView(MainFrameViewModel mainFrameViewModel) {
 		initialize();
+		viewModel = mainFrameViewModel;
 	}
 
 	/**
@@ -79,15 +74,7 @@ public class MainFrameView {
 		taskList.setBounds(21, 42, 664, 480);
 		frame.getContentPane().add(taskList);
 	}
-	
-	private static void initializeFromNavigator(){ // this method has to be moved in the future!
-		MainFrameModel mainFrameModel = new MainFrameModel(){{
-			setTaskBoard(new TaskBoard());
-		}};
 		
-		viewModel = new MainFrameViewModel(mainFrameModel);
-	}
-	
 	private void addTask(){
 		viewModel.addTask(taskTitleTextField.getText());
 		refreshTaskList();
