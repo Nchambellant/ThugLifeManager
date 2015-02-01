@@ -63,6 +63,7 @@ public class TaskManagerTest {
 		assertTrue(task.getTitle() == taskTitle);
 	}
 	
+	@SuppressWarnings("serial")
 	@Test
 	public void deleteTask(){
 		//Arrange
@@ -78,6 +79,7 @@ public class TaskManagerTest {
 					);
 		}};
 		TaskManager taskManager = new TaskManager();
+		
 		//Act
 		taskManager.deleteTask(taskBoard, task);
 		

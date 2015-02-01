@@ -17,10 +17,9 @@ public class TaskManager {
 		taskBoard.getTasks().get(indexOfTask).setIsCompleted(true);
 	}
 
-	public void deleteTask(TaskBoard taskBoard, Task task) {
+	public void deleteTask(TaskBoard taskBoard, Task task) {		
 		int indexOfTask = taskBoard.getTasks().indexOf(task);
 		taskBoard.getTasks().remove(indexOfTask);
-		
 	}
 
 }
